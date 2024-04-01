@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health ChatBot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container bg-white rounded-lg shadow-md">
+    <h1 class="text-3xl font-bold mb-4 text-center">Mental Health ChatBot</h1>
+    <div class="chat" id="chatContainer">
+      <!-- Chat messages will be added here dynamically -->
+    </div>
+    <div class="flex">
+      <input type="text" id="userInput" placeholder="Type your message here..." class="outline-none" onkeyup="handleKeyPress(event)">
+      <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+    <div class="typing-indicator" id="typingIndicator"></div>
+  </div>
+  <div class="footer">
+    &copy; 2024 <span class="hover:underline"><a target="_blank" href="https://github.com/dn3305">ChatBot Dan's Teams.</a></span> All rights reserved.
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
